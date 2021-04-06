@@ -145,3 +145,6 @@ otherLink.href = '#';
 document.querySelector('nav').appendChild(otherLink);
 
 navBar.forEach(item => item.style.color = 'green');
+
+blogLink.style.color = 'green';
+otherLink.style.color = 'green'
