@@ -99,3 +99,19 @@ productText.textContent = siteContent["main-content"]["product-content"];
 visionText.textContent = siteContent["main-content"]["vision-content"];
 
 document.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"]
+
+// Footer 
+
+const contact = document.querySelector('.contact h4');
+const contactInfo = document.querySelectorAll('.contact p');
+
+const address = contactInfo[0];
+const phone = contactInfo[1];
+const email = contactInfo[2];
+
+contact.textContent = siteContent['contact']["contact-h4"]
+address.textContent = siteContent['contact']['address']
+phone.textContent = siteContent['contact']['phone']
+email.textContent = siteContent['contact']['email']
+
+document.querySelector('footer p').textContent = siteContent['footer']['copyright']
