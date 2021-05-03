@@ -115,3 +115,19 @@ phone.textContent = siteContent['contact']['phone']
 email.textContent = siteContent['contact']['email']
 
 document.querySelector('footer p').textContent = siteContent['footer']['copyright']
+
+
+// adding new content
+
+const blogLink = document.createElement('a');
+blogLink.textContent = 'Blog';
+blogLink.href = '#';
+document.querySelector('nav').prepend(blogLink);
+
+const questionsLink = document.createElement('a');
+questionsLink.textContent = 'Questions?'
+questionsLink.href = '#';
+document.querySelector('nav').appendChild(questionsLink);
+
+const navBar = document.querySelectorAll('nav a')
+navBar.forEach(item => item.style.color = 'green');
