@@ -59,8 +59,8 @@ NavBar6.textContent = NavBar1.textContent = siteContent.nav['nav-item-6'];
 // Top Content
 
 const cta = siteContent["cta"]["h1"].split(' ');
-const title = document.getElementsByTagName('h1')[0];
-title.innerHTML = cta.join('<br>');
+const ctaText = document.getElementsByTagName('h1')[0];
+ctaText.innerHTML = cta.join('<br>');
 
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta['button'];
@@ -70,25 +70,32 @@ ctaImg.src = siteContent.cta['img-src']
 
 // Main content
 
-const features = document.querySelector('.text-content h4:nth-of-type(1)');
-const featuresText = document.querySelector('.text-content p:nth-of-type(1)');
+const contentSection = document.querySelector('.main-content');
+const title = contentSection.querySelectorAll('h4');
+const contentText = contentSection.querySelectorAll('p');
 
+const features = title[0];
+const about = title[1];
+const services = title[2];
+const product = title[3];
+const vision = title[4];
 
-const about = features.nextElementSibling;
-const services = about.nextElementSibling;
-const product = services.nextElementSibling;
-const vision = product.nextElementSibling;
+features.textContent = siteContent["main-content"]["features-h4"];
+about.textContent = siteContent["main-content"]["about-h4"];
+services.textContent = siteContent["main-content"]["services-h4"];
+product.textContent = siteContent["main-content"]["product-h4"];
+vision.textContent = siteContent["main-content"]["vision-h4"];
 
-const aboutText = featuresText.nextElementSibling;
-const servicesText = aboutText.nextElementSibling;
-const productText = servicesText.nextElementSibling;
-const visionText = productText.nextElementSibling;
+const featuresText = contentText[0]
+const aboutText = contentText[1]
+const servicesText = contentText[2]
+const productText = contentText[3]
+const visionText = contentText[4]
 
+featuresText.textContent = siteContent["main-content"]["features-content"];
+aboutText.textContent = siteContent["main-content"]["about-content"];
+servicesText.textContent = siteContent["main-content"]["services-content"];
+productText.textContent = siteContent["main-content"]["product-content"];
+visionText.textContent = siteContent["main-content"]["vision-content"];
 
-contentTitles.textContent = siteContent["main-content"]['features-h4'];
-contentTitles2.textContent = 'Yolo';
- siteContent["main-content"]['about-h4'];
-
-
-contentText.textContent = siteContent['main-content']['features-content']
-
+document.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"]
